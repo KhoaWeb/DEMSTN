@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Đếm từ 1 đến vô tận</h2>
+
+<p id="counter">1</p>
+
+<script>
+let counter = localStorage.getItem('counter') || 1;
+document.getElementById('counter').innerHTML = counter;
+
+setInterval(() => {
+  counter++;
+  localStorage.setItem('counter', counter);
+  document.getElementById('counter').innerHTML = counter;
+}, 0);
+</script>
+
+</body>
+</html>
